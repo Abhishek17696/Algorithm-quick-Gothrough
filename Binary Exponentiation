@@ -1,0 +1,21 @@
+//Binary Exponentiation
+------------------------
+int power(int a,int b)
+{
+    int ans=1;
+    
+    while(b>0) // Binary representaion of b
+    {
+        if(b&1) //Only set bit contributes
+        ans=ans*a;
+        
+        a=a*a;
+        b>>=1;
+    }
+    return ans;
+}
+
+-------------------------
+Time Complexity: O(logb)
+Space Complexity: O(1)
+-------------------------
